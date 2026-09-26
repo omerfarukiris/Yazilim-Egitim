@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova-Store</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" class="nav-logo">Nova Store</a>
+        <div class="nav-links">
+          <a href="#">Yeni Gelenler</a>
+          <a href="#">Erkek</a>
+          <a href="#">Kadın</a>
+          <a href="#">Aksesuar</a>
+        </div>
+        <div class="nav-actions">
+          <button type="button">Ara</button>
+          <button type="button">Hesabım</button>
+          <button type="button">Sepetim</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

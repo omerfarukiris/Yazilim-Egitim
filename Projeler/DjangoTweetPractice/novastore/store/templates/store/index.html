@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'store/store.css' %}">
+{% endblock %}
+{% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">YENİ SEZON / 2026</p>
+            <h1>Yeni Koleksiyonu Keşfet</h1>
+            <p class="hero-description">
+                Sade çizgiler, rahat dokular. Her gününe eşlik edecek
+                yeni parçaları keşfet.
+            </p>
+            <a href="#" class="hero-cta">Koleksiyonu Keşfet →</a>
+            <a href="#" class="hero-secondary-link">Yeni Gelenler</a>
+        </div>
+        <div class="hero-media">
+            <img src="{% static 'store/images/novastore-hero.png' %}"
+                 alt="Yeni sezon kadın koleksiyonu">
+        </div>
+    </section>
+    <section class="categories">
+        <h2>Koleksiyonları Keşfet</h2>
+        <div class="category-grid">
+            <a href="#" class="category-card">
+                <img src="{% static 'store/images/hero-women.png' %}"
+                     alt="Kadın koleksiyonu">
+                <h3>Kadın</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="{% static 'store/images/hero-man.png' %}"
+                     alt="Erkek koleksiyonu">
+                <h3>Erkek</h3>
+            </a>
+            <a href="#" class="category-card">
+                <img src="{% static 'store/images/hero-accessories.png' %}"
+                     alt="Aksesuar koleksiyonu">
+                <h3>Aksesuar</h3>
+            </a>
+        </div>
+    </section>
+    <section class="new-arrivals">
+        <h2>Yeni Gelenler</h2>
+        <div class="product-grid">
+            <article class="product-card">
+                <a href="{% url 'store:product_detail' %}" class="product-link">
+                    <img src="{% static 'store/images/urun-kadin-krem-triko-kazak.png' %}"
+                         alt="Krem triko kazak giyen model">
+                    <h3>Krem Triko Kazak</h3>
+                    <p>₺1.299</p>
+                </a>
+            </article>
+            <article class="product-card">
+                <a href="{% url 'store:product_detail' %}" class="product-link">
+                    <img src="{% static 'store/images/urun-kadin-zeytin-keten-gomlek.png' %}"
+                         alt="Zeytin Keten Gömlek giyen model">
+                    <h3>Zeytin Keten Gömlek</h3>
+                    <p>₺1.499</p>
+                </a>
+            </article>
+            <article class="product-card">
+                <a href="{% url 'store:product_detail' %}" class="product-link">
+                    <img src="{% static 'store/images/urun-erkek-bej-overshirt.png' %}"
+                         alt="Bej Gömlek Ceket giyen model">
+                    <h3>Bej Gömlek Ceket</h3>
+                    <p>₺1.899</p>
+                </a>
+            </article>
+            <article class="product-card">
+                <a href="{% url 'store:product_detail' %}" class="product-link">
+                    <img src="{% static 'store/images/urun-aksesuar-zeytin-omuz-cantasi.png' %}"
+                         alt="Zeytin Omuz çantası">
+                    <h3>Zeytin Omuz Çantası</h3>
+                    <p>₺2.199</p>
+                </a>
+            </article>
+        </div>
+    </section>
+{% endblock %}
